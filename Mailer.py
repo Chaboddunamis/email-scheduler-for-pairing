@@ -6,7 +6,7 @@ from sendgrid.helpers.mail import Mail
 from dotenv import load_dotenv
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
-from Pairs import *
+
 import datetime
 START_DATE = datetime.date(2021, 1, 20)
 
@@ -129,15 +129,15 @@ def send_email(content):
     body = content
 
     message_body = """
-Hi there!
+Good morning beloved.
 
-<p> Here is today's partnership schedule
+<p> Here is today's partnership schedule:
 </p>
 {}
 """.format(body)
     message = Mail(
         from_email='Chabod@resumeflo.com',
-        to_emails=['Henry.uwakxy@gmail.com', 'uwaks4arsenal@yahoo.com'],
+        to_emails=['Henry.uwakxy@gmail.com', 'uwaks4arsenal@yahoo.com', 'ifaugustine94@gmail.com'],
         subject='Trialing Your Auto-Pairing Scheduler',
         html_content=message_body)
     
